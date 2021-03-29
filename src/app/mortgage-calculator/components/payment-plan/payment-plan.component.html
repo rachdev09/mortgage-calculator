@@ -1,8 +1,8 @@
 <form [formGroup]="paymentPlanForm" (submit)="calculate.emit()">
-  <div class="flex mb4 items-start">
-    <div class="w-50 ba br2 b--med-blue">
+  <div class="flex flex-column flex-row-ns mb4 items-start">
+    <div class="w-100 w-50-ns ba br2 b--med-blue">
       <div class="bg--med-blue pa2">
-        <h2 class="white ma0 fw6 f4 tc">Payment Plan</h2>
+        <h2 class="white ma0 fw6 f5 f4-ns tc">Payment Plan</h2>
       </div>
       <div class="ph3">
         <div class="form-control">
@@ -54,9 +54,9 @@
       </div>
     </div>
 
-    <div class="w-50 ba ml4 br2 b--med-blue">
+    <div class="w-100 w-50-ns ba mt4 mt0-ns ml4-ns br2 b--med-blue">
       <div class="bg--med-blue pa2">
-        <h2 class="white ma0 fw6 f4 tc">Downpayment</h2>
+        <h2 class="white ma0 fw6 f5 f4-ns tc">Downpayment</h2>
       </div>
       <div class="ph3">
         <div class="form-control">
@@ -79,6 +79,6 @@
     </div>
   </div>
 
-  <button type="submit" class="m-auto pointer flex ph5 pv2 tc bg--med-blue white br-pill f4 border-none">Calculate</button>
+  <button type="submit" class="m-auto pointer flex ph5 pv2 tc bg--med-blue white br-pill f5 f4-ns border-none">Calculate</button>
 
 </form>
