@@ -10,10 +10,17 @@ Mortgage can be calculated by providing the mortgage amount, interest rate, amor
 
 1. Responsive design to support multiple devices.
 2. Lazy loaded feature modules.
-3. Completely accessible.
-4. Unit testing using Jest. 
-5. Code structure in accordance with Angular guidelines.
-6. CSS Toolkit - Tachyons used for styling.
+3. Unit testing using Jest. 
+4. Code structure in accordance with Angular guidelines.
+5. CSS Toolkit - Tachyons used for styling.
+6. Accessibility Considerations
+  a. Skip to main content.
+  b. aria-labels
+  c. alt text
+  d. Color contrast
+  e. Semantic HTML
+  f. Button/anchor tag for clickables
+  g. Labels associated with form controls
 
 ## Setup
 
