@@ -1,6 +1,6 @@
-# MortgageCalculatorApp
+# Mortgage Calculator App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Mortgage Calculator App built with Angular.
 
 ## Development server
 

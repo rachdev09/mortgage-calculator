@@ -8,7 +8,7 @@
         <div class="form-control">
           <label>
             <span>Mortgage Amount ($): *</span>
-            <input type="number" formControlName="mortgageAmount">
+            <input type="number" formControlName="mortgageAmount" aria-label="Mortgage amount input">
           </label>
           <div *ngIf="hasError('mortgageAmount')">
             <p class="error">{{getError('mortgageAmount')}}</p>
@@ -18,7 +18,7 @@
         <div class="form-control">
           <label>
             <span>Interest Rate (%): *</span>
-            <input type="number" formControlName="interestRate">
+            <input type="number" formControlName="interestRate" aria-label="Interest rate input">
           </label>
           <div *ngIf="hasError('interestRate')">
             <p class="error">{{getError('interestRate')}}</p>
@@ -28,7 +28,7 @@
         <div class="form-control">
           <label>
             <span>Amortization Period: *</span>
-            <select formControlName="amortizationYears">
+            <select formControlName="amortizationYears" aria-label="Amortization period dropdown">
               <option *ngFor="let year of amortizationYears" [value]=year.value>{{year.label}}</option>
             </select>
           </label>
@@ -37,7 +37,7 @@
         <div class="form-control">
           <label>
             <span>Payment Frequency: *</span>
-            <select formControlName="paymentFrequency">
+            <select formControlName="paymentFrequency" aria-label="Payment frequency dropdown">
               <option *ngFor="let frequency of paymentFrequency" [value]="frequency.value">{{frequency.label}}</option>
             </select>
           </label>
@@ -46,7 +46,7 @@
         <div class="form-control">
           <label>
             <span>Term: *</span>
-            <select formControlName="term">
+            <select formControlName="term" aria-label="Term dropdown">
               <option *ngFor="let term of terms" [value]="term.value">{{term.label}}</option>
             </select>
           </label>
@@ -62,7 +62,7 @@
         <div class="form-control">
           <label>
             <span>Downpayment Amount ($):</span>
-            <input type="number" formControlName="downpaymentAmount">
+            <input type="number" formControlName="downpaymentAmount" aria-label="Downpayment input">
           </label>
           <div *ngIf="hasError('downpaymentAmount')">
             <p class="error">{{getError('downpaymentAmount')}}</p>
@@ -72,13 +72,13 @@
         <div class="form-control">
           <label>
             <span>Downpayment Percentage:</span>
-            <input type="text" formControlName="downpaymentPercentage" disabled>
+            <input type="text" formControlName="downpaymentPercentage" disabled aria-label="Downpayment percentage">
           </label>
         </div>
     </div>
     </div>
   </div>
 
-  <button type="submit" class="m-auto pointer flex ph5 pv2 tc bg--med-blue white br-pill f5 f4-ns border-none">Calculate</button>
+  <button type="submit" aria-label="calculate" class="m-auto pointer flex ph5 pv2 tc bg--med-blue white br-pill f5 f4-ns border-none">Calculate</button>
 
 </form>
