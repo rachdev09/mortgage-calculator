@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {PaymentScheduleComponent} from '@mortgage-calculator/components/payment-schedule/payment-schedule.component';
 import {MortgageService} from '@mortgage-calculator/mortgage.service';
 import {By} from '@angular/platform-browser';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('PaymentScheduleComponent', () => {
   let component: PaymentScheduleComponent;
@@ -10,7 +11,8 @@ describe('PaymentScheduleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PaymentScheduleComponent ]
+      declarations: [ PaymentScheduleComponent ],
+      imports: [RouterTestingModule]
     })
     .compileComponents();
   });

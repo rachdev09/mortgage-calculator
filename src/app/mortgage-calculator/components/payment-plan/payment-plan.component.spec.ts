@@ -62,13 +62,14 @@ describe('PaymentPlanComponent', () => {
     expect(selectElements.length).toBe(3);
     expect(headings.length).toBe(2);
 
-    expect(labelElements[0].nativeElement.textContent).toBe(' Mortgage Amount: ');
-    expect(labelElements[1].nativeElement.textContent).toBe(' Interest Rate: ');
-    expect(labelElements[2].nativeElement.textContent).toContain(' Amortization Period: ');
-    expect(labelElements[3].nativeElement.textContent).toContain(' Payment Frequency: ');
-    expect(labelElements[4].nativeElement.textContent).toContain(' Term: ');
-    expect(labelElements[5].nativeElement.textContent).toBe(' Downpayment Percentage: ');
-    expect(labelElements[6].nativeElement.textContent).toBe(' Downpayment Amount: ');
+    expect(labelElements[0].nativeElement.textContent).toBe('Mortgage Amount ($): *');
+    expect(labelElements[1].nativeElement.textContent).toBe('Interest Rate (%): *');
+    expect(labelElements[2].nativeElement.textContent).toContain('Amortization Period: *');
+    expect(labelElements[3].nativeElement.textContent).toContain('Payment Frequency: *');
+    expect(labelElements[4].nativeElement.textContent).toContain('Term: *');
+    expect(labelElements[5].nativeElement.textContent).toBe('Downpayment Amount ($):');
+    expect(labelElements[6].nativeElement.textContent).toBe('Downpayment Percentage:');
+
 
     expect((inputElements[0].nativeElement as HTMLInputElement).value).toBe('100000');
     expect((inputElements[1].nativeElement as HTMLInputElement).value).toBe('5');
