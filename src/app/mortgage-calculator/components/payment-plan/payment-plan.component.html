@@ -7,21 +7,21 @@
       <div class="ph3">
         <div class="form-control">
           <label>
-            <span>Mortgage Amount: *</span>
-            <input type="text" formControlName="mortgageAmount">
+            <span>Mortgage Amount ($): *</span>
+            <input type="number" formControlName="mortgageAmount">
           </label>
           <div *ngIf="hasError('mortgageAmount')">
-            <p>{{getError('mortgageAmount')}}</p>
+            <p class="error">{{getError('mortgageAmount')}}</p>
           </div>
         </div>
 
         <div class="form-control">
           <label>
-            <span>Interest Rate: *</span>
-            <input type="text" formControlName="interestRate">
+            <span>Interest Rate (%): *</span>
+            <input type="number" formControlName="interestRate">
           </label>
           <div *ngIf="hasError('interestRate')">
-            <p>{{getError('interestRate')}}</p>
+            <p class="error">{{getError('interestRate')}}</p>
           </div>
         </div>
 
@@ -61,11 +61,11 @@
       <div class="ph3">
         <div class="form-control">
           <label>
-            <span>Downpayment Amount:</span>
-            <input type="text" formControlName="downpaymentAmount">
+            <span>Downpayment Amount ($):</span>
+            <input type="number" formControlName="downpaymentAmount">
           </label>
           <div *ngIf="hasError('downpaymentAmount')">
-            <p>{{getError('downpaymentAmount')}}</p>
+            <p class="error">{{getError('downpaymentAmount')}}</p>
           </div>
         </div>
 

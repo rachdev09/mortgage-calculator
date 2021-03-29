@@ -99,7 +99,7 @@ describe('MortgageCalculatorPageComponent', () => {
     calculateButton.click();
     fixture.detectChanges();
     const heading: HTMLHeadingElement = fixture.debugElement.query(By.css('app-mortgage-summary h2')).nativeElement as HTMLHeadingElement;
-    const paragraphElements = fixture.debugElement.queryAll(By.css('p'));
+    const paragraphElements = fixture.debugElement.queryAll(By.css('app-calculatiom-summary p'));
     const listElements = fixture.debugElement.queryAll(By.css('li'));
 
     expect(heading.textContent).toEqual('Mortgage Summary');
