@@ -1,0 +1,76 @@
+<form [formGroup]="paymentPlanForm" (submit)="calculate.emit()">
+  <div class="flex">
+    <div class="w-50">
+      <h2>Payment Plan</h2>
+      <div>
+        <label>
+          Mortgage Amount:
+          <input type="text" formControlName="mortgageAmount">
+        </label>
+        <div *ngIf="hasError('mortgageAmount')">
+          <p>{{getError('mortgageAmount')}}</p>
+        </div>
+      </div>
+
+      <div>
+        <label>
+          Interest Rate:
+          <input type="text" formControlName="interestRate">
+        </label>
+        <div *ngIf="hasError('interestRate')">
+          <p>{{getError('interestRate')}}</p>
+        </div>
+      </div>
+
+      <div>
+        <label>
+          Amortization Period:
+          <select formControlName="amortizationYears">
+            <option *ngFor="let year of amortizationYears" [value]=year.value>{{year.label}}</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Payment Frequency:
+          <select formControlName="paymentFrequency">
+            <option *ngFor="let frequency of paymentFrequency" [value]="frequency.value">{{frequency.label}}</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Term:
+          <select formControlName="term">
+            <option *ngFor="let term of terms" [value]="term.value">{{term.label}}</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="w-50">
+      <h2>Downpayment</h2>
+      <div>
+        <label>
+          Downpayment Percentage:
+          <input type="text" formControlName="downpaymentPercentage" disabled>
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Downpayment Amount:
+          <input type="text" formControlName="downpaymentAmount">
+        </label>
+        <div *ngIf="hasError('downpaymentAmount')">
+          <p>{{getError('downpaymentAmount')}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="ma3 pointer">Calculate</button>
+
+</form>

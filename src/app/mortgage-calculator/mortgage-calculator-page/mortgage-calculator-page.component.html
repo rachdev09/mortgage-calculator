@@ -1,0 +1,8 @@
+<section>
+  <app-payment-plan [paymentPlanForm]="paymentPlanForm" (calculate)="calculate()"></app-payment-plan>
+  <ng-container *ngIf="mortgageService.paymentSchedule?.length">
+    <app-calculation-summary></app-calculation-summary>
+    <app-mortgage-summary></app-mortgage-summary>
+    <a [routerLink]="['/mortgage-calculator/payment-schedule']">Summary Report</a>
+  </ng-container>
+</section>

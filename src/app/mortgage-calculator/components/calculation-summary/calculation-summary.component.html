@@ -1,0 +1,40 @@
+<div>
+  <h2>Calculation Summary</h2>
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Term</th>
+      <th>Amortization Period</th>
+    </tr>
+    <tr>
+      <th>Number of Payments</th>
+      <td>{{mortgageService.numOfTermPayments}}</td>
+      <td>{{mortgageService.numOfPayments}}</td>
+    </tr>
+    <tr>
+      <th>Mortgage Payment</th>
+      <td>{{mortgageService.mortgagePayment | currency: '$'}}</td>
+      <td>{{mortgageService.mortgagePayment | currency: '$'}}</td>
+    </tr>
+    <tr>
+      <th>Downpayment</th>
+      <td>{{mortgageService.paymentPlan.downpaymentAmount | currency: '$'}}</td>
+      <td>{{mortgageService.paymentPlan.downpaymentAmount | currency: '$'}}</td>
+    </tr>
+    <tr>
+      <th>Principal Payments</th>
+      <td>{{mortgageService.principalTermPayment | currency: '$'}}</td>
+      <td>{{mortgageService.principalPayment | currency: '$'}}</td>
+    </tr>
+    <tr>
+      <th>Interest Payments</th>
+      <td>{{mortgageService.interestTermPayment | currency: '$'}}</td>
+      <td>{{mortgageService.interestPayment | currency: '$'}}</td>
+    </tr>
+    <tr>
+      <th>Total Cost</th>
+      <td>{{mortgageService.totalTermPayment | currency: '$'}}</td>
+      <td>{{mortgageService.totalPayment | currency: '$'}}</td>
+    </tr>
+  </table>
+</div>

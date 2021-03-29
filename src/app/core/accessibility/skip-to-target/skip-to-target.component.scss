@@ -1,0 +1,17 @@
+.skip-to-target {
+  a {
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    &:focus, &:active {
+      left: 0;
+      width: auto;
+      height: auto;
+      overflow: auto;
+      position: relative;
+      transition: left 1.5s;
+    }
+  }
+}

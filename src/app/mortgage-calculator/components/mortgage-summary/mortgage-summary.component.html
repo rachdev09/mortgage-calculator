@@ -1,0 +1,32 @@
+<div>
+  <h2>Mortgage Summary</h2>
+  <div>
+    <p>Over the <strong>{{mortgageService.paymentPlan.amortizationYears}}</strong>-year amortization period, you will:
+    </p>
+    <ul>
+      <li>have made <strong>{{mortgageService.numOfPayments}}</strong> {{frequency | lowercase}} payments of
+        <strong>{{mortgageService.mortgagePayment | currency: '$'}}</strong>.
+      </li>
+      <li>have paid <strong>{{mortgageService.principalPayment | currency: '$'}}</strong> in principal,
+        <strong>{{mortgageService.interestPayment | currency: '$'}}</strong> in interest, for a total of
+        <strong>{{mortgageService.totalPayment | currency: '$'}}</strong>.
+      </li>
+    </ul>
+
+    <p>Over the <strong>{{mortgageService.paymentPlan.term}}</strong>-year term, you will:</p>
+    <ul>
+      <li>have made <strong>{{mortgageService.numOfTermPayments}}</strong> {{frequency | lowercase}} payments of
+        <strong>{{mortgageService.mortgagePayment | currency: '$'}}</strong>.
+      </li>
+      <li>have paid <strong>{{mortgageService.principalTermPayment | currency: '$'}}</strong> in principal,
+        <strong>{{mortgageService.interestTermPayment | currency: '$'}}</strong> in interest, for a total of
+        <strong>{{mortgageService.totalTermPayment | currency: '$'}}</strong>.
+      </li>
+    </ul>
+
+    <p>At the end of your <strong>{{mortgageService.paymentPlan.term}}</strong>-year term, you will:</p>
+    <ul>
+      <li>have a balance of <strong>{{mortgageService.afterTermBalance | currency: '$'}}</strong>.</li>
+    </ul>
+  </div>
+</div>
