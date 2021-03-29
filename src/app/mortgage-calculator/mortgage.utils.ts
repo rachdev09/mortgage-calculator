@@ -11,9 +11,9 @@ export class MortgageUtils {
   static getPaymentFrequencies(): {label: string, value: number}[] {
     return [
       {label: 'Weekly', value: 52},
-      {label: 'Bi-Weekly(every 2 weeks)', value: 26},
-      {label: 'Semi-monthly(24x per year)', value: 24},
-      {label: 'Monthly(12x per year)', value: 12 }
+      {label: 'Bi-Weekly (every 2 weeks)', value: 26},
+      {label: 'Semi-monthly (24x per year)', value: 24},
+      {label: 'Monthly (12x per year)', value: 12 }
     ];
   }
 

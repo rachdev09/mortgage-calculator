@@ -1,0 +1,28 @@
+@import '../../../../styles/colors.scss';
+
+table {
+  border-collapse: collapse;
+  tr:nth-child(even) {
+    background-color: $med-light-blue;
+  }
+}
+.heading {
+  th {
+    color: white;
+    background-color: $med-blue;
+    border: 1px solid white;
+  }
+}
+th,
+td {
+  padding: 0.8rem;
+  border: 1px solid $med-blue;
+}
+td {
+  text-align: center;
+}
+tr {
+  th:first-child {
+    padding-left: 2rem;
+  }
+}

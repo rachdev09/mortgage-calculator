@@ -1,8 +1,10 @@
 <section>
+  <p class="lh-copy f4">This calculator determines your mortgage payment and provides you with a mortgage payment schedule. The calculator also shows how much money and how many years you can save by making prepayments.</p>
   <app-payment-plan [paymentPlanForm]="paymentPlanForm" (calculate)="calculate()"></app-payment-plan>
   <ng-container *ngIf="mortgageService.paymentSchedule?.length">
     <app-calculation-summary></app-calculation-summary>
     <app-mortgage-summary></app-mortgage-summary>
-    <a [routerLink]="['/mortgage-calculator/payment-schedule']">Summary Report</a>
+    <div class="flex justify-center">
+      <a [routerLink]="['/mortgage-calculator/payment-schedule']" class="pointer ph5 pv2 tc bg--med-blue white br-pill f4 border-none no-underline">Payment Schedule</a></div>
   </ng-container>
 </section>

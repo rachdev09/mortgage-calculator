@@ -1,76 +1,84 @@
 <form [formGroup]="paymentPlanForm" (submit)="calculate.emit()">
-  <div class="flex">
-    <div class="w-50">
-      <h2>Payment Plan</h2>
-      <div>
-        <label>
-          Mortgage Amount:
-          <input type="text" formControlName="mortgageAmount">
-        </label>
-        <div *ngIf="hasError('mortgageAmount')">
-          <p>{{getError('mortgageAmount')}}</p>
+  <div class="flex mb4 items-start">
+    <div class="w-50 ba br2 b--med-blue">
+      <div class="bg--med-blue pa2">
+        <h2 class="white ma0 fw6 f4 tc">Payment Plan</h2>
+      </div>
+      <div class="ph3">
+        <div class="form-control">
+          <label>
+            <span>Mortgage Amount: *</span>
+            <input type="text" formControlName="mortgageAmount">
+          </label>
+          <div *ngIf="hasError('mortgageAmount')">
+            <p>{{getError('mortgageAmount')}}</p>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <label>
-          Interest Rate:
-          <input type="text" formControlName="interestRate">
-        </label>
-        <div *ngIf="hasError('interestRate')">
-          <p>{{getError('interestRate')}}</p>
+        <div class="form-control">
+          <label>
+            <span>Interest Rate: *</span>
+            <input type="text" formControlName="interestRate">
+          </label>
+          <div *ngIf="hasError('interestRate')">
+            <p>{{getError('interestRate')}}</p>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <label>
-          Amortization Period:
-          <select formControlName="amortizationYears">
-            <option *ngFor="let year of amortizationYears" [value]=year.value>{{year.label}}</option>
-          </select>
-        </label>
-      </div>
+        <div class="form-control">
+          <label>
+            <span>Amortization Period: *</span>
+            <select formControlName="amortizationYears">
+              <option *ngFor="let year of amortizationYears" [value]=year.value>{{year.label}}</option>
+            </select>
+          </label>
+        </div>
 
-      <div>
-        <label>
-          Payment Frequency:
-          <select formControlName="paymentFrequency">
-            <option *ngFor="let frequency of paymentFrequency" [value]="frequency.value">{{frequency.label}}</option>
-          </select>
-        </label>
-      </div>
+        <div class="form-control">
+          <label>
+            <span>Payment Frequency: *</span>
+            <select formControlName="paymentFrequency">
+              <option *ngFor="let frequency of paymentFrequency" [value]="frequency.value">{{frequency.label}}</option>
+            </select>
+          </label>
+        </div>
 
-      <div>
-        <label>
-          Term:
-          <select formControlName="term">
-            <option *ngFor="let term of terms" [value]="term.value">{{term.label}}</option>
-          </select>
-        </label>
+        <div class="form-control">
+          <label>
+            <span>Term: *</span>
+            <select formControlName="term">
+              <option *ngFor="let term of terms" [value]="term.value">{{term.label}}</option>
+            </select>
+          </label>
+        </div>
       </div>
     </div>
 
-    <div class="w-50">
-      <h2>Downpayment</h2>
-      <div>
-        <label>
-          Downpayment Percentage:
-          <input type="text" formControlName="downpaymentPercentage" disabled>
-        </label>
+    <div class="w-50 ba ml4 br2 b--med-blue">
+      <div class="bg--med-blue pa2">
+        <h2 class="white ma0 fw6 f4 tc">Downpayment</h2>
       </div>
-
-      <div>
-        <label>
-          Downpayment Amount:
-          <input type="text" formControlName="downpaymentAmount">
-        </label>
-        <div *ngIf="hasError('downpaymentAmount')">
-          <p>{{getError('downpaymentAmount')}}</p>
+      <div class="ph3">
+        <div class="form-control">
+          <label>
+            <span>Downpayment Amount:</span>
+            <input type="text" formControlName="downpaymentAmount">
+          </label>
+          <div *ngIf="hasError('downpaymentAmount')">
+            <p>{{getError('downpaymentAmount')}}</p>
+          </div>
         </div>
-      </div>
+
+        <div class="form-control">
+          <label>
+            <span>Downpayment Percentage:</span>
+            <input type="text" formControlName="downpaymentPercentage" disabled>
+          </label>
+        </div>
+    </div>
     </div>
   </div>
 
-  <button type="submit" class="ma3 pointer">Calculate</button>
+  <button type="submit" class="m-auto pointer flex ph5 pv2 tc bg--med-blue white br-pill f4 border-none">Calculate</button>
 
 </form>

@@ -1,0 +1,31 @@
+$light-blue: #e5f7fd;
+$med-light-blue: #e6f6ff;
+$cool-blue: #00aeef;
+$med-blue: #0076b6;
+$dark-blue: #00395d;
+$med-gray: #cccccc;
+
+.dark-blue {
+  color: $dark-blue;
+}
+.med-blue {
+  color: $med-blue;
+}
+
+.b--cool-blue {
+  border-color: $cool-blue;
+}
+.b--med-blue {
+  border-color: $med-blue;
+}
+.b--med-grey {
+  border-color: $med-gray;
+}
+
+.bg--light-blue {
+  background-color: $light-blue;
+}
+.bg--med-blue {
+  background-color: $med-blue;
+}
+

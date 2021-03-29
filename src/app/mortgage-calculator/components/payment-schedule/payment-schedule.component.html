@@ -1,19 +1,19 @@
-<div>
-  <h2>Payment Schedule</h2>
-  <table>
-    <tr>
-      <th>Period</th>
-      <th>Principal Payment</th>
-      <th>Interest Payment</th>
-      <th>Total Payment</th>
-      <th>Ending Balance</th>
+<div lass="flex flex-column">
+  <h2 class="dark-blue ff-titillium-web tc">Payment Schedule</h2>
+  <table class="w-100">
+    <tr class="heading">
+      <th class="w-20">Period</th>
+      <th class="w-20">Principal Payment</th>
+      <th class="w-20">Interest Payment</th>
+      <th class="w-20">Total Payment</th>
+      <th class="w-20">Ending Balance</th>
     </tr>
     <tr>
-      <th>Term</th>
+      <th colspan="5">Term</th>
     </tr>
     <ng-container *ngFor="let payment of mortgageService.paymentSchedule; let index = index">
       <tr *ngIf="getYear(index)">
-        <th>Year {{getYear(index)}}</th>
+        <th colspan="5">Year {{getYear(index)}}</th>
       </tr>
       <tr>
         <th>Payment {{index + 1}}</th>
@@ -37,7 +37,7 @@
         <th>{{getTermTotals().endingBalance | currency: '$'}}</th>
       </tr>
       <tr *ngIf="isEofTerm(index)">
-        <th>After Term</th>
+        <th colspan="5">After Term</th>
       </tr>
       <tr *ngIf="isEofPayments(index)">
         <th>After Term Totals</th>

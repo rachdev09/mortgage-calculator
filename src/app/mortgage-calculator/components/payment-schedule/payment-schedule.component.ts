@@ -1,15 +1,22 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PaymentSchedule} from '@mortgage-calculator/mortgage';
 import {MortgageService} from '@mortgage-calculator/mortgage.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-payment-schedule',
   templateUrl: './payment-schedule.component.html',
   styleUrls: ['./payment-schedule.component.scss']
 })
-export class PaymentScheduleComponent {
+export class PaymentScheduleComponent implements OnInit {
 
-  constructor(public mortgageService: MortgageService) { }
+  constructor(public mortgageService: MortgageService, private router: Router) { }
+
+  ngOnInit(): void {
+    if (!this.mortgageService.paymentSchedule?.length) {
+      this.router.navigate(['../']);
+    }
+  }
 
   getYear(index: number): number {
     const frequency = this.mortgageService.paymentPlan.paymentFrequency;
