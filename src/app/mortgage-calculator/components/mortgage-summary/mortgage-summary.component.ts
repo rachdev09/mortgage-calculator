@@ -13,6 +13,6 @@ export class MortgageSummaryComponent {
 
   get frequency(): string {
     return MortgageUtils.getPaymentFrequencies()
-      .find(frequency => frequency.value === this.mortgageService.paymentPlan.paymentFrequency).label;
+      .find(frequency => frequency.value === this.mortgageService.paymentPlan.paymentFrequency)?.label;
   }
 }
