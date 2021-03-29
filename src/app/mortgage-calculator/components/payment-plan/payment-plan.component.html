@@ -51,6 +51,13 @@
             </select>
           </label>
         </div>
+
+        <div *ngIf="paymentPlanForm.errors?.crossFieldAmountError">
+          <p class="mv2 red">Downpayment should be less than mortgage amount.</p>
+        </div>
+        <div *ngIf="paymentPlanForm.errors?.crossFieldPeriodError">
+          <p class="mv2 red">Term should be less than amortization period.</p>
+        </div>
       </div>
     </div>
 
